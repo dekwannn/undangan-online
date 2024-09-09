@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messageElement.className = 'guest-message';
 
             messageElement.innerHTML = `
-                <div class="avatar" style="background-image: url('path/to/default-avatar.png');"></div>
+                <div class="avatar" style="background-image: url('assets/images/avatarr.png');"></div>
                 <div class="message-content">
                     <div class="name">${messageData.name}</div>
                     <div class="attendance">Kehadiran: ${messageData.attendance}</div>
