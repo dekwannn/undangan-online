@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="message-content">
                     <div class="name">${messageData.name}</div>
                     <div class="attendance">Kehadiran: ${messageData.attendance}</div>
-                    <div class="timestamp">Dikirim pada: ${new Date(messageData.timestamp).toLocaleString()}</div>
+                    <div class="timestamp">${new Date(messageData.timestamp).toLocaleString()}</div>
                     <div class="message-text">${messageData.message}</div>
                 </div>
             `;
@@ -173,3 +173,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const musicToggle = document.getElementById('musicToggle');
+    const musicIcon = document.getElementById('musicIcon');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    
+    let isPlaying = true;
+
+    musicToggle.addEventListener('click', function () {
+        if (isPlaying) {
+            backgroundMusic.pause();
+            musicIcon.textContent = '🔇'; // Icon untuk mute
+        } else {
+            backgroundMusic.play();
+            musicIcon.textContent = '🔊'; // Icon untuk unmute
+        }
+        isPlaying = !isPlaying;
+    });
+});
+
