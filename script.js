@@ -1,4 +1,23 @@
-// script.js
+// Import Firebase modules
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDdjjE3877uZZZCDfHMBUvzbdGt3fdDVsQ",
+    authDomain: "undangan-mepandes-c05ad.firebaseapp.com",
+    projectId: "undangan-mepandes-c05ad",
+    storageBucket: "undangan-mepandes-c05ad.appspot.com",
+    messagingSenderId: "782886313507",
+    appId: "1:782886313507:web:17a2fa070d204f42365b96",
+    measurementId: "G-9J7VV1TCHJ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+// Countdown Timer
 const countdownDate = new Date("September 14, 2024 11:00:00").getTime();
 
 const x = setInterval(function() {
