@@ -66,26 +66,41 @@
         </section>
 
         <section id="section2" class="section section-animate">
-    <div class="invitation-card">
-        <div class="content">
-            <h2 class="heading">Waktu & Tempat</h2>
+            <div class="invitation-card">
+                <div class="content">
+                    <h2 class="heading">Waktu & Tempat</h2>
 
-            <div class="time-place">
-                <p><strong>Sabtu, 14 September 2024</strong></p>
-                <p><strong>Pukul 11:00 - Selesai</strong></p>
-                <p><strong>Pulau Menjangan, Banyuning Selatan, Kab. Buleleng, Bali</strong></p>
+                    <div class="time-place">
+                        <p><strong>Sabtu, 14 September 2024</strong></p>
+                        <p><strong>Pukul 11:00 - Selesai</strong></p>
+                        <p><strong>Pulau Menjangan, Banyuning Selatan, Kab. Buleleng, Bali</strong></p>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.8170822914917!2d115.10930857500851!3d-8.120098591909327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDcnMTIuNCJTIDExNcKwMDYnNDIuOCJF!5e0!3m2!1sid!2sid!4v1725895926723!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <br>
+                    </div>
+                </div>
             </div>
+            <div class="section-divider" style="margin-top: 30px;">
+                <img src="assets/images/pembatas.png" alt="Pembatas">
+            </div>
+        </section>
 
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.8170822914917!2d115.10930857500851!3d-8.120098591909327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDcnMTIuNCJTIDExNcKwMDYnNDIuOCJF!5e0!3m2!1sid!2sid!4v1725895926723!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <br>
+        <!-- Modal untuk Stiker -->
+        <div id="stickerModal" class="sticker-modal">
+            <div class="sticker-modal-content">
+                <span class="close">&times;</span>
+                <div id="stickerGallery">
+                    <img src="https://media.tenor.com/QRc3Y6geJ-8AAAAi/line-sticker-bear-sticker.gif" alt="Stiker 1" class="sticker" data-url="https://media.tenor.com/QRc3Y6geJ-8AAAAi/line-sticker-bear-sticker.gif">
+                    <img src="https://media.tenor.com/-lXsoQ83LFEAAAAi/anlasildi-tamam-boz-ayi-renkli-cikartma.gif" alt="Stiker 2" class="sticker" data-url="https://media.tenor.com/-lXsoQ83LFEAAAAi/anlasildi-tamam-boz-ayi-renkli-cikartma.gif">
+                    <img src="https://media.tenor.com/JRCZFxQn6nwAAAAi/cony-brown.gif" alt="Stiker 3" class="sticker" data-url="https://media.tenor.com/JRCZFxQn6nwAAAAi/cony-brown.gif">
+                    <img src="https://media.tenor.com/Gn-2Xi6NP-oAAAAi/cony-brown.gif" alt="Stiker 4" class="sticker" data-url="https://media.tenor.com/Gn-2Xi6NP-oAAAAi/cony-brown.gif">
+                    <img src="https://media.tenor.com/scE7ol54HJIAAAAi/cookie-run-gingerbrave.gif" alt="Stiker 5" class="sticker" data-url="https://media.tenor.com/scE7ol54HJIAAAAi/cookie-run-gingerbrave.gif">
+                    <img src="https://media.tenor.com/Ol-YAmfWQ34AAAAi/sad-mafumafu.gif" alt="Stiker 6" class="sticker" data-url="https://media.tenor.com/Ol-YAmfWQ34AAAAi/sad-mafumafu.gif">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="section-divider" style="margin-top: 30px;">
-        <img src="assets/images/pembatas.png" alt="Pembatas">
-    </div>
-</section>
 
         <section id="section5" class="section">
             <div class="invitation-card">
@@ -103,9 +118,15 @@
                         
                         <label for="message">Pesan:</label>
                         <textarea id="message" name="message" required></textarea>
-                        
-                        <button type="submit">Kirim</button>
+                        <div id="selectedStickers"></div>
+                        <div class="button-container">
+                            <button type="button" id="stickerButton" class="sticker-btn">
+                                😊
+                            </button>
+                            <button type="submit" class="submit-btn">Kirim</button>
+                        </div>
                     </form>
+                    <!-- <div id="selectedStickers"></div> -->
                     <div id="guestMessages"></div>
                 </div>
             </div>
@@ -113,6 +134,9 @@
                 <img src="assets/images/pembatas.png" alt="Pembatas">
             </div>
         </section>
+
+        
+        
         
 
         <section id="section4" class="section section-animate">
@@ -140,7 +164,7 @@
     
 
     <script type="module" src="script.js" defer></script>
-    
+     
     <!-- Firebase SDK -->
 
 </body>
